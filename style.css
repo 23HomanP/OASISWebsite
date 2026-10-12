@@ -189,21 +189,51 @@ footer a:hover {
     font-size: clamp(2rem, 6vw, 3rem);
 }
 .officer {
-    background-color: rgb(237, 237, 237);
-    border-radius: 1rem;
+    background-color: lightgrey;
+    cursor: pointer;
+    display:grid;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.officer-front,
+.officer-back {
+    grid-area: 1 / 1;           /* stack both in the same spot */
+    transition: opacity 0.25s ease;
+}
+.officer-back {
+    opacity: 0;
+    visibility: hidden;         /* hidden but still takes up space */
+}
+.officer.flipped .officer-front {
+    opacity: 0;
+    visibility: hidden;
+}
+.officer.flipped .officer-back {
+    opacity: 1;
+    visibility: visible;
+}
+.officer:hover,
+.officer:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+.officer .hint {
+    font-size: 0.9rem;
+    color: #555;
 }
 .officer h3,
 .officer h4 {
     padding: 5px 0;
 }
-.officer img {
+.officer .headshot {
     width: 100%;
     max-width: 250px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
 }
-
+.links{
+    width: clamp(3rem,10vw,5rem)
+}
 /* Programs page */
 .headline h1 {
     font-size: clamp(3rem, 10vw, 5rem);

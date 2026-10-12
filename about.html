@@ -78,25 +78,67 @@
         <h2 class="text-center mb-4">Leadership</h2>
         <div class="row g-4 justify-content-center">
             <div class="col-12 col-sm-6 col-lg-4">
-            <div id="President" class="officer h-100 p-4 text-center">
-                <h3>President</h3>
-                <h4>Paul Homan</h4>
-                <img src="images/Paul_headshot.jpg" alt="Paul Homan, President">
-            </div>
+              <div id="President" class="officer h-100 p-4 text-center"
+                  role="button" tabindex="0" aria-pressed="false">
+
+                <!-- Front -->
+                <div class="officer-front">
+                  <h3>President</h3>
+                  <h4>Paul Homan</h4>
+                  <img class="headshot" src="images/Paul_headshot.jpg" alt="Paul Homan, President">
+                  <p class="hint mt-3 mb-0">Click to learn more</p>
+                </div>
+
+                <!-- Back -->
+                <div class="officer-back">
+                  <h3>Paul Homan</h3>
+                  <h4>Senior, Information Science</h4>
+                  <p>Hi I'm Paul. I've been in OASIS for 3 years and outside of Information Science I like to do CrossFit and be active. I have worked as a video game analyst and a web content intern. I'm also a resident assistant. Feel free to say hi to me, although I may not acknowledge you.</p>
+                  <a href="https://www.linkedin.com/in/paulhoman1/" target="_blank"><img class="links" src="images/linkedinIcon.svg"></a>
+                </div>
+              </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-4">
-            <div id="Vice" class="officer h-100 p-4 text-center">
-                <h3>Vice President</h3>
-                <h4>Ara</h4>
-                <img src="images/Ara_headshot.jpg" alt="Ara, Vice President">
-            </div>
+              <div id="Vice" class="officer h-100 p-4 text-center"
+                  role="button" tabindex="0" aria-pressed="false">
+
+                <!-- Front -->
+                <div class="officer-front">
+                  <h3>Vice President</h3>
+                  <h4>Mairon Ara</h4>
+                  <img class="headshot" src="images/Ara_headshot.jpg" alt="Mairon Ara headshot, Vice-President">
+                  <p class="hint mt-3 mb-0">Click to learn more</p>
+                </div>
+
+                <!-- Back -->
+                <div class="officer-back">
+                  <h3>Mairon Ara</h3>
+                  <h4>Senior, Health Informatics</h4>
+                  <p>Hello! My name is Mairon and I've been a member of OASIS for 4 years - outside of my major I love reading and engaging with the arts. I have spent a lot of my academic career studying  healthcare technology systems  and will be kicking off my professional career working for UPMC.</p>
+                  <a href="https://www.linkedin.com/in/anandhi-narayan-182781289/" target="_blank"><img class="links" src="images/linkedinIcon.svg"></a>
+                </div>
+              </div>
             </div>
             <div class="col-12 col-sm-6 col-lg-4">
-            <div id="Business" class="officer h-100 p-4 text-center">
-                <h3>Business Manager</h3>
-                <h4>Julian Reinstein</h4>
-                <img src="images/julian_headshot.jpeg" alt="Julian Reinstein, Business Manager">
-            </div>
+              <div id="Business" class="officer h-100 p-4 text-center"
+                  role="button" tabindex="0" aria-pressed="false">
+
+                <!-- Front -->
+                <div class="officer-front">
+                  <h3>Business Manager</h3>
+                  <h4>Julian Reinstein</h4>
+                  <img class="headshot" src="images/julian_headshot.jpeg" alt="Julian Reinstein headshot, Business Manager">
+                  <p class="hint mt-3 mb-0">Click to learn more</p>
+                </div>
+
+                <!-- Back -->
+                <div class="officer-back">
+                  <h3>Julian Reinstein</h3>
+                  <h4>Senior, Computational Social Science</h4>
+                  <p>Hello! I'm Julian, and I've been a member of OASIS for three years. Outside of computational social science and information science, I like to watch sports (especially baseball) and play video games. Over the summer, I worked as an intern for a politician back home. I plan on completing SCI's accelerated BS/MSIS next school year.</p>
+                  <a href="https://www.linkedin.com/in/julianreinstein/" target="_blank"><img class="links" src="images/linkedinIcon.svg"></a>
+                </div>
+              </div>
             </div>
         </div>
     </section>
@@ -119,5 +161,26 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
           crossorigin="anonymous"></script>
+
+  <script>
+  document.querySelectorAll('.officer').forEach(card => {
+    const toggle = () => {
+      const flipped = card.classList.toggle('flipped');
+      card.setAttribute('aria-pressed', String(flipped));
+    };
+
+    card.addEventListener('click', e => {
+      if (e.target.closest('a')) return;   // let the email link work normally
+      toggle();
+    });
+
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+</script>
 </body>
 </html>
