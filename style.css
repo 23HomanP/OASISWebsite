@@ -1,0 +1,312 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-family: "Oswald";
+}
+
+html{
+    font-size: 16px;
+}
+/* Navbar background and logo */
+.navbar {
+  background-color: #75C5E3;
+}
+.navbar-brand img {
+  height: 60px;
+}
+
+/* Links: same look as before */
+.navbar .nav-link {
+  display: inline-block;
+  padding: 0.5rem;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: black;
+}
+
+/* Gold wipe hover effect */
+.navbar .nav-link::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  color: gold;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s ease;
+}
+.navbar .nav-link:hover::after {
+  width: calc(100% - 1rem);
+}
+
+/* Join Us button */
+#join {
+    --bs-btn-color: black;
+    --bs-btn-hover-color: black;
+    --bs-btn-active-color: black;
+
+    background-color: gold;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.25rem 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#join:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 992px){
+    .navbar .link {
+        gap: 1rem;
+    }
+}
+/* footer */
+footer a {
+    color: black;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+/*Home Page CSS*/
+/* Hero text */
+#section1 h1 {
+    font-size: clamp(5rem, 16vw, 8rem);
+}
+
+@media (min-width: 992px) {   /* lg */
+    #section1 h1 {
+        font-size: 11rem;
+    }
+}
+
+@media (min-width: 1200px) {  /* xl */
+    #section1 h1 {
+        font-size: 14rem;
+    }
+}
+#section1 h2 {
+    font-size: 1rem;
+}
+#section1 p {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 1rem;
+}
+
+/* Hero buttons */
+#buttons1 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(75vw, 20rem);
+    min-height: 4rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#buttons1 a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+#joinbutton {
+    background-color: gold;
+    color: #0b103e;
+    border: .25rem solid gold;
+}
+#aboutbutton {
+    background-color: white;
+    color: black;
+    border: .25rem solid gold;
+}
+
+@media (min-width: 768px) {
+    #buttons1 a {
+        width: auto;
+        min-width: 12rem;
+        padding: 0 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+/*About Page CSS*/
+/* Mission */
+#section1about h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+}
+#section1about p {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+
+/* Making Space */
+#section2about {
+    background-color: #75c6e3;
+}
+#section2about h2 {
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+#section2about img {
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    #section1about h1 {
+        font-size: 6rem;
+    }
+}
+@media (min-width: 1024px) {   /* lg */
+    #section1about h1 {
+        font-size: 11rem;
+    }
+
+    #section2about p{
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1200px) {  /* xl */
+    #section1about h1 {
+        font-size: 14rem;
+    }
+    #section2about p{
+        font-size: 1.5rem;
+    }
+}
+
+/* Leadership */
+#leadership h2 {
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+.officer {
+    background-color: rgb(237, 237, 237);
+    border-radius: 1rem;
+}
+.officer h3,
+.officer h4 {
+    padding: 5px 0;
+}
+.officer img {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Programs page */
+.headline h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+}
+
+.program-header {
+    background-color: #75C5E3;
+}
+.program-header h2 {
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.program p {
+    font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+}
+
+.program img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+
+@media (min-width: 768px) {
+    .headline h1 {
+        font-size: 6rem;
+    }
+
+    .program h2 {
+        font-size: 4rem;
+    }
+    .program p {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 1024px) {   /* lg */
+    .headline h1 {
+        font-size: 8rem;
+    }
+
+    .program h2 {
+        font-size: 6rem;
+    }
+    .program p {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (min-width: 1200px) {  /* xl */
+    .program p {
+        font-size: 3rem;
+    }
+
+}
+/* Joining page */
+.joining h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+}
+
+.instructions {
+    background-color: gold;
+}
+
+.howto p {
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.icons img {
+    height: 3rem;
+    width: auto;
+}
+
+@media (min-width: 992px) {
+    .joining h1 {
+        font-size: 6rem;
+    }
+
+    .howto p{
+        font-size: 2rem;
+    }
+
+    .icons img {
+        height: 6rem;
+    }
+}
+@media (min-width: 1200px) {
+    .howto p{
+        font-size: 2.5rem;
+    }
+
+    .icons img {
+        height: 7rem;
+    }
+}
+
+
+#First_Step h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+

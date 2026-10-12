@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About OASIS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about OASIS, the Official Association for Students in Information Science at the University of Pittsburgh." />
+  <link rel="icon" href="images/OASISLogo.png">
+
+  <!-- Google Fonts: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+  <!-- Your CSS goes LAST -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="home.html">
+          <img src="images/OASISLogo.png" alt="OASIS Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 text-center text-lg-start">
+            <li class="nav-item"><a class="nav-link" href="home.html" data-text="Home">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html" data-text="About">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="programs.html" data-text="Programs">Programs</a></li>
+            <li class="nav-item mt-2 mt-lg-0">
+              <a class="btn" id="join" href="joining.html">Join Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow-1">
+    <!-- Mission -->
+    <section id="section1about" class="container py-4 py-md-5 text-center text-md-start">
+        <h1>Mission</h1>
+        <p>To introduce students to Information Science and provide support in their professional development.</p>
+    </section>
+
+    <!-- Making Space -->
+    <section id="section2about" class="py-4 py-md-5">
+        <div class="container">
+            <h2 class="mb-4">Making Space in the Tech Sphere</h2>
+            <div class="row align-items-center g-4">
+            <div class="col-12 col-md-6">
+                <p>The Official Association for Students in Information Science (OASIS) was the first academic organization for Information Science Students at Pitt and still is the only one to support the Information Science community as a whole.</p>
+                <p>We hold events for all students regardless of major to explore disciplines in Information Science such as Analytics, User Experience, Cybersecurity, and Product Management. We also hold social events for students to connect and bond.</p>
+            </div>
+            <div id="boardImage" class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+                <img src="images/StudentsBroll.jpeg" alt="OASIS students at an event" class="img-fluid">
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="container py-4 py-md-5">
+        <h2 class="text-center mb-4">Leadership</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-6 col-lg-4">
+            <div id="President" class="officer h-100 p-4 text-center">
+                <h3>President</h3>
+                <h4>Paul Homan</h4>
+                <img src="images/Paul_headshot.jpg" alt="Paul Homan, President">
+            </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+            <div id="Vice" class="officer h-100 p-4 text-center">
+                <h3>Vice President</h3>
+                <h4>Ara</h4>
+                <img src="images/Ara_headshot.jpg" alt="Ara, Vice President">
+            </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+            <div id="Business" class="officer h-100 p-4 text-center">
+                <h3>Business Manager</h3>
+                <h4>Julian Reinstein</h4>
+                <img src="images/julian_headshot.jpeg" alt="Julian Reinstein, Business Manager">
+            </div>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <footer class="py-4 text-center">
+    <div class="container">
+      <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-3 fw-bold fs-5 mb-3">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="joining.html">Join Us</a></li>
+      </ul>
+      <p class="mb-1">Email: <a href="mailto:pittoasis@gmail.com">pittoasis@gmail.com</a></p>
+      <p class="mb-0">© 2026 OASIS</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
+</body>
+</html>
