@@ -7,12 +7,25 @@
 html{
     font-size: 16px;
 }
-/* Navbar background and logo */
-.navbar {
-  background-color: #75C5E3;
+h2, h3, h4{
+    font-weight: 300;
 }
+p{
+    font-family: "Overpass";
+}
+/* Navbar background and logo */
 .navbar-brand img {
   height: 60px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu a{
+    font-family: "Oswald";
+    font-weight: 300;
 }
 
 /* Links: same look as before */
@@ -46,25 +59,36 @@ html{
 }
 
 /* Join Us button */
+/* Join Us button */
 #join {
     --bs-btn-color: black;
+    --bs-btn-bg: gold;
+    --bs-btn-border-color: gold;
     --bs-btn-hover-color: black;
+    --bs-btn-hover-bg: #ffd633;
+    --bs-btn-hover-border-color: #ffd633;
     --bs-btn-active-color: black;
+    --bs-btn-active-bg: #e6c200;
+    --bs-btn-active-border-color: #e6c200;
 
-    background-color: gold;
-    border: 0;
     border-radius: 5px;
     font-size: 1.5rem;
     font-weight: 500;
-    text-align: center;
     padding: 0.25rem 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-#join:hover {
+
+#join:hover,
+#join:focus-visible {
     transform: scale(1.05);
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
+#join:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
 @media (min-width: 992px){
     .navbar .link {
         gap: 1rem;
@@ -81,25 +105,15 @@ footer a:hover {
 /*Home Page CSS*/
 /* Hero text */
 #section1 h1 {
-    font-size: clamp(5rem, 16vw, 8rem);
+    font-size: clamp(5rem, 16vw, 14rem);
 }
 
-@media (min-width: 992px) {   /* lg */
-    #section1 h1 {
-        font-size: 11rem;
-    }
-}
-
-@media (min-width: 1200px) {  /* xl */
-    #section1 h1 {
-        font-size: 14rem;
-    }
-}
 #section1 h2 {
-    font-size: 1rem;
+    font-size: clamp(.5rem, 16vw, 1rem);
+    font-weight: 100;
 }
 #section1 p {
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(1rem, 3vw, 2rem);
     margin-top: 1rem;
 }
 
@@ -115,10 +129,16 @@ footer a:hover {
     font-weight: 600;
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-#buttons1 a:hover {
+#buttons1 a:hover,
+#buttons1 a:focus-visible {
     transform: scale(1.05);
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+#buttons1 a:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 #joinbutton {
     background-color: gold;
@@ -131,6 +151,55 @@ footer a:hover {
     border: .25rem solid gold;
 }
 
+#missionSection p{
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin-top: 1rem;
+}
+
+#missionSection{
+    background: linear-gradient(0deg, #558ead 0%, #88e7fa 40%, #a8ebf8 80%, #ffffff 100%);
+}
+
+#eventSection h2{
+    font-size: 1.5rem;
+}
+#eventSection p{
+    font-size:1rem;
+    padding-top: .5rem;
+}
+
+
+
+.involvedCard{
+    background-color: #e8e9ea;
+    border-radius: 30px;
+    max-width: 500px;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.involvedCard:hover{
+    transform: scale(1.03);
+}
+
+.involveImage img{
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.involvedCard h3{
+    margin-top: 1rem;
+}
+
+.involvedCard p{
+    margin-top: 1rem;
+}
+
+#involvedSection{
+    background: linear-gradient(180deg, #558ead 0%, #88e7fa 40%, #a8ebf8 80%, #ffffff 100%);
+}
 @media (min-width: 768px) {
     #buttons1 a {
         width: auto;
@@ -139,49 +208,53 @@ footer a:hover {
         font-size: 1.5rem;
     }
 }
+
+
+
 /*About Page CSS*/
 /* Mission */
+#section1about{
+    background-color: #88e7fa;
+}
 #section1about h1 {
-    font-size: clamp(3rem, 10vw, 5rem);
+    font-size: clamp(3rem, 15vw, 10rem);
+    font-weight: 300;
 }
+
 #section1about p {
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-size: clamp(1rem, 2vw, 3rem);
+}
+
+@media (min-width: 320px){
+    #section1about p{
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px){
+    #section1about p {
+    text-align:left;
+    position:absolute;
+    top: 50%;
+    left: 45%;
+    max-width:35ch;
+    }
+    #section1about {
+        height:35rem;
+    }
 }
 
 
-/* Making Space */
-#section2about {
-    background-color: #75c6e3;
-}
+
+/* A brief history*/
 #section2about h2 {
     font-size: clamp(2rem, 6vw, 3rem);
 }
 #section2about img {
     border-radius: 1rem;
 }
-
-@media (min-width: 768px) {
-    #section1about h1 {
-        font-size: 6rem;
-    }
-}
-@media (min-width: 1024px) {   /* lg */
-    #section1about h1 {
-        font-size: 11rem;
-    }
-
-    #section2about p{
-        font-size: 1.3rem;
-    }
-}
-
-@media (min-width: 1200px) {  /* xl */
-    #section1about h1 {
-        font-size: 14rem;
-    }
-    #section2about p{
-        font-size: 1.5rem;
-    }
+#section2about p {
+    max-width: 45ch;
 }
 
 /* Leadership */
@@ -189,19 +262,25 @@ footer a:hover {
     font-size: clamp(2rem, 6vw, 3rem);
 }
 .officer {
-    background-color: lightgrey;
+    background-color: #e8e9ea;
     cursor: pointer;
     display:grid;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .officer-front,
 .officer-back {
     grid-area: 1 / 1;           /* stack both in the same spot */
     transition: opacity 0.25s ease;
 }
+
 .officer-back {
     opacity: 0;
     visibility: hidden;         /* hidden but still takes up space */
+}
+.officer-back p {
+    font-size: clamp(0.7rem, 5vw, 0.9rem);
 }
 .officer.flipped .officer-front {
     opacity: 0;
@@ -235,108 +314,73 @@ footer a:hover {
     width: clamp(3rem,10vw,5rem)
 }
 /* Programs page */
-.headline h1 {
-    font-size: clamp(3rem, 10vw, 5rem);
+#InitiativeSection h2{
+    font-size: 3rem;
 }
 
-.program-header {
-    background-color: #75C5E3;
-}
-.program-header h2 {
-    font-size: clamp(2rem, 6vw, 3rem);
-}
-
-.program p {
-    font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-}
-
-.program img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
+.initiativeCard{
+    background-color:#e8e9ea;
     border-radius: 1rem;
 }
 
-
-@media (min-width: 768px) {
-    .headline h1 {
-        font-size: 6rem;
-    }
-
-    .program h2 {
-        font-size: 4rem;
-    }
-    .program p {
-        font-size: 2rem;
-    }
+.initiativeCard h3{
+    font-size: 2rem;
 }
-@media (min-width: 1024px) {   /* lg */
-    .headline h1 {
-        font-size: 8rem;
-    }
-
-    .program h2 {
-        font-size: 6rem;
-    }
-    .program p {
-        font-size: 2.5rem;
-    }
-
+.initiativeCard img{
+    max-width:50px;
+    width:5rem;
+    height: auto;
+}
+#EventSection h2{
+    font-size: 3rem;
+}
+#EventSection p{
+    max-width:30ch;
+}
+.eventImage img{
+    border-radius: 1rem;
+    max-width:75vw;
+    height: auto;
 }
 
-@media (min-width: 1200px) {  /* xl */
-    .program p {
-        font-size: 3rem;
-    }
-
+@media (min-width:768px){
+    .eventImage img{
+    max-width:30vw;
+    width:25vw;
+    height:auto;
+}
 }
 /* Joining page */
+.joining{
+    background:linear-gradient(180deg, #558ead 0%, #88e7fa 40%, #a8ebf8 80%, #ffffff 100%);
+}
 .joining h1 {
     font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 300;
+}
+.joining h2{
+    font-size: clamp(2rem, 3.5vw, 7rem);
 }
 
-.instructions {
-    background-color: gold;
+.joining p{
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 5rem);
 }
-
-.howto p {
-    background-color: white;
-    border-radius: 5px;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-}
-
-.icons img {
+.icons {
     height: 3rem;
     width: auto;
 }
-
-@media (min-width: 992px) {
-    .joining h1 {
-        font-size: 6rem;
-    }
-
-    .howto p{
-        font-size: 2rem;
-    }
-
-    .icons img {
-        height: 6rem;
-    }
-}
-@media (min-width: 1200px) {
-    .howto p{
-        font-size: 2.5rem;
-    }
-
-    .icons img {
-        height: 7rem;
-    }
+.icons {
+    display: inline-block;
+    transition: transform 0.2s ease;
 }
 
-
+.icons :hover,
+.icons :focus-visible{
+    transform: scale(1.1);
+}
 #First_Step h1 {
     font-size: clamp(2rem, 6vw, 3rem);
 }
+
 
